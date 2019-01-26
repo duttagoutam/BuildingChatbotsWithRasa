@@ -1,0 +1,73 @@
+Rasa Core version = '0.12.0a4'
+Rasa NLU version = '0.13.6'
+
+1. Create Data (data.json) file inside project folder Rasa_basic_folder
+-------------
+
+2. Run the below in command prompt to create data using UI
+
+rasa-nlu-trainer --source ./data/data.json
+
+3. Create config file (config_spacy.json) inside project folder Rasa_basic_folder
+
+4. Build the model by running the below in command prompt
+--------------------
+python nlu_model.py
+
+5. Create domain (restaurant_domain.yml)
+---------------------
+
+6. Create custom actions (action.py)
+---------------------
+
+7. Create story (stories.md)
+--------------------------
+
+8. Train the Model (train_init.py)
+------------------------------
+python train_init.py
+
+9. Train the model Online (train_online.py)
+------------------------------
+python train_online.py
+
+10. Run the Dailog Management Model (dialogue_management_model.py)
+------------------------------
+python -m rasa_core_sdk.endpoint --actions actions
+
+python dialogue_management_model.py
+or alternatively you can run the dialogue management in command prompt directly
+
+python -m rasa_core.run --core models/dialogue -u models/nlu/default/restaurantnlu --endpoints endpoints.yml
+
+11. Run Chantbot in Slack (Run the below command to start the endpoint)
+=========================
+python -m rasa_core.run -d models/dialogue -u models/nlu/default/restaurantnlu --port 5004 --credentials credentials.yml --endpoints endpoints.yml
+
+12.  Create Public URL using ngrok
+-----------------------
+ngrok.exe http 5004
+
+13. For custom action add below URL to Interactive Components to display Message Menus in slack
+https://api.slack.com/apps/ADD8139Q9/interactive-messages?
+
+14. Sample URL as below
+https://b0e47ab4.ngrok.io/webhooks/slack/webhook
+
+15. Subscribe to Event Subscriptions in slack
+https://api.slack.com/apps/ADD8139Q9/event-subscriptions?
+
+16. Sample URL as below
+https://73aa3171.ngrok.io/webhooks/slack/webhook
+
+17. Also Subscribe to Bot Events as mentioned below to subscribe events related to the channels 
+app_mention
+message.in
+
+18. Bot is ready to start the chat in the below URL
+---------------------
+https://duttagoutam.slack.com/messages/DDD46S9B2/team/UDELEU7L7/
+
+19. Youtube video location for the chatbot presentation
+
+https://youtu.be/sGkauRsTOvs

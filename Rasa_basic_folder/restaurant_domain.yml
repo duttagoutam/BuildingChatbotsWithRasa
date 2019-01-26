@@ -1,0 +1,89 @@
+slots:
+  location:
+    type: text
+  cuisine:
+    type: text
+  budget:
+    type: text
+  email:
+    type: text
+    
+entities:
+- location
+- cuisine
+- budget
+- email
+
+intents:
+ - greet
+ - affirm
+ - deny
+ - goodbye
+ - thankyou
+ - out_of_scope
+ - restaurant_search
+ - send_email
+
+
+templates:
+  utter_greet:
+    - "Hi there! How may i help you?"
+  utter_goodbye:
+    - "Okay. Bon Appetit!"
+    - "Sent. Bon Appetit!"
+    - "Sent"
+  utter_default:
+    - "Sorry I did not understand what you just said"
+  utter_ask_cuisine: 
+    - text: "what kind of cuisine would you like to have?"
+      buttons:
+      - title: "Chinese" 
+        payload: "Chinese"
+      - title: "Mexican"
+        payload: "Mexican"
+      - title: "Italian"
+        payload: "Italian"
+      - title: "American"
+        payload: "American"
+      - title: "Thai"
+        payload: "Thai"
+      - title: "North Indian"
+        payload: "North Indian"
+  utter_ask_budget: 
+    - text: "what's the average budget for two people?"
+      buttons:
+      - title: "Less than Rs. 300"
+        payload: "Less than Rs. 300"
+      - title: "Rs. 300 to 700"
+        payload: "Rs. 300 to 700"
+      - title: "More than 700"
+        payload: "More than 700"
+  utter_ask_howcanhelp:
+    - "how can I help you?"
+  utter_ask_about_emailing:
+    - "Should i send you details of top 10 restuarants on email?"
+  utter_ask_email_id:
+    - "To what email id should I sent it to you?"
+  utter_ask_location:
+    - "In what location?"
+  utter_top_restaurant:
+    - "Showing you top 5 rated restaurants:"   
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_cuisine
+- utter_ask_budget
+- utter_ask_email_id
+- utter_top_restaurant
+- utter_ask_about_emailing
+- action_restaurant
+- action_validate_email
+- action_validate_cuisine
+- action_validate_location
+- action_validate_budget
+- action_email
+- action_restarted
