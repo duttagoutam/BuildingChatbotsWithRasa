@@ -11,9 +11,9 @@ import lxml.html
 GOOGLE_ACCOUNTS_BASE_URL = 'https://accounts.google.com'
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
-GOOGLE_CLIENT_ID = '819662028-i636p42qpstqc0ak3g4khlrsmrl1f2vi.apps.googleusercontent.com'
-GOOGLE_CLIENT_SECRET = 'Mr_1H0SthFf2CxBSKORSSqi2'
-GOOGLE_REFRESH_TOKEN = '1/y4V9hbKEKQBhs9xdR50tpuFNCl5JL4Ztd54e8OXZc_c'
+GOOGLE_CLIENT_ID = '819662028-i636p42qpstqc0ak3g4khlrsmrlxxx.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET = 'Mr_1H0SthFf2CxBSKORxxx'
+GOOGLE_REFRESH_TOKEN = '1/y4V9hbKEKQBhs9xdR50tpuFNCl5JL4Ztd5Zc_cxxx'
 
 
 def command_to_url(command):
